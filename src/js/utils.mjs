@@ -21,3 +21,8 @@ export function setClick(selector, callback) {
   });
   qs(selector).addEventListener("click", callback);
 }
+export async function loadJSON(path) {
+  const response = await fetch(path);
+  if (!response.ok) throw new Error("Failed to load JSON");
+  return await response.json();
+}
