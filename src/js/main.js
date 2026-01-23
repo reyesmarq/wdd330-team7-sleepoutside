@@ -29,3 +29,34 @@ async function loadTents() {
 }
 
 loadTents();
+
+// Dynamic Header + Footer Injection
+
+function loadHeaderFooter() {
+  const header = `
+    <header class="divider">
+      <div class="logo">
+        <img src="/images/noun_Tent_2517.svg" alt="tent logo" />
+        <a href="/index.html">Sleep<span class="highlight">Outside</span></a>
+      </div>
+      <div class="cart">
+        <a href="/cart/index.html">
+          <img src="/images/noun_Backpack_65884.svg" alt="cart icon" />
+        </a>
+      </div>
+    </header>
+  `;
+
+  const footer = `
+    <footer>
+      &copy;2025 ⛺ SleepOutside ⛺ WDD 330 Team Project
+    </footer>
+  `;
+
+  document.body.insertAdjacentHTML("afterbegin", header);
+  document.body.insertAdjacentHTML("beforeend", footer);
+}
+
+// run automatically on every page that includes main.js
+loadHeaderFooter();
+
