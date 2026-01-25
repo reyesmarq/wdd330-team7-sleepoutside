@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="200" height="150">
+  <rect width="200" height="150" fill="#2d5a27"/>
+  <polygon points="100,30 40,120 160,120" fill="#4a7c43" stroke="#fff" stroke-width="2"/>
+  <polygon points="100,50 60,110 140,110" fill="#5d9654"/>
+  <rect x="90" y="85" width="20" height="25" fill="#3d2914"/>
+  <text x="100" y="140" text-anchor="middle" fill="#fff" font-family="Arial" font-size="14" font-weight="bold">TENTS</text>
+</svg>
