@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="200" height="150">
+  <rect width="200" height="150" fill="#5c4a1a"/>
+  <rect x="25" y="30" width="8" height="80" fill="#3d2914"/>
+  <rect x="167" y="30" width="8" height="80" fill="#3d2914"/>
+  <path d="M30 45 Q100 100 170 45" stroke="#8b5a2b" stroke-width="8" fill="none"/>
+  <path d="M30 45 Q100 90 170 45" stroke="#a0522d" stroke-width="6" fill="none"/>
+  <line x1="30" y1="45" x2="30" y2="35" stroke="#666" stroke-width="2"/>
+  <line x1="170" y1="45" x2="170" y2="35" stroke="#666" stroke-width="2"/>
+  <text x="100" y="140" text-anchor="middle" fill="#fff" font-family="Arial" font-size="14" font-weight="bold">HAMMOCKS</text>
+</svg>

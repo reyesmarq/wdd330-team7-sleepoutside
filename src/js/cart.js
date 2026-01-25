@@ -13,10 +13,11 @@ function renderCartContents() {
 }
 
 function cartItemTemplate(item) {
+  const imageSrc = item.Images?.PrimaryMedium || item.Image;
   const newItem = `<li class="cart-card divider">
   <a href="#" class="cart-card__image">
     <img
-      src="${item.Image}"
+      src="${imageSrc}"
       alt="${item.Name}"
     />
   </a>

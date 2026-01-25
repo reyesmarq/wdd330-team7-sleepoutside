@@ -193,6 +193,48 @@ button {
 
 /* End product list card */
 
+/* Category card styles */
+.category-list {
+  gap: 1rem;
+}
+
+.category-card {
+  flex: 1 1 45%;
+  max-width: 200px;
+  text-align: center;
+  border: 1px solid var(--light-grey);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.category-card a {
+  display: block;
+  text-decoration: none;
+  color: var(--dark-grey);
+}
+
+.category-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.category-card h3 {
+  padding: 0.75rem;
+  margin: 0;
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 1rem;
+}
+
+/* End category card styles */
+
 .product-detail {
   padding: 1em;
   max-width: 500px;

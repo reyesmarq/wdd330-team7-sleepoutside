@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="200" height="150">
+  <rect width="200" height="150" fill="#4a1a5c"/>
+  <ellipse cx="100" cy="70" rx="70" ry="35" fill="#7b3f9e"/>
+  <ellipse cx="100" cy="70" rx="60" ry="28" fill="#6a2d8e"/>
+  <ellipse cx="100" cy="45" rx="25" ry="20" fill="#d4a574"/>
+  <circle cx="95" cy="42" r="3" fill="#333"/>
+  <circle cx="108" cy="42" r="3" fill="#333"/>
+  <path d="M97 50 Q102 55 107 50" stroke="#333" stroke-width="2" fill="none"/>
+  <text x="100" y="140" text-anchor="middle" fill="#fff" font-family="Arial" font-size="12" font-weight="bold">SLEEPING BAGS</text>
+</svg>
