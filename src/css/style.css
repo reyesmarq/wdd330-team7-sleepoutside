@@ -175,6 +175,7 @@ button {
   padding: 0.5em;
   border: 1px solid var(--light-grey);
   max-width: 250px;
+  position: relative;
 }
 
 .product-card h2,
@@ -190,6 +191,38 @@ button {
 .card__name {
   font-size: 1em;
 }
+
+/* Discount indicator styles */
+.discount-badge {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  background-color: #e53935;
+  color: white;
+  padding: 0.25em 0.5em;
+  font-size: var(--small-font);
+  font-weight: bold;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: var(--small-font);
+  margin-right: 0.5em;
+}
+
+.sale-price {
+  color: #e53935;
+  font-weight: bold;
+}
+
+.product-card--discounted {
+  border-color: #e53935;
+}
+
+/* End discount indicator styles */
 
 /* End product list card */
 
