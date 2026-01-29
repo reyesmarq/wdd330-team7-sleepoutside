@@ -18,3 +18,21 @@ async function addToCartHandler(e) {
 document
   .getElementById("addToCart")
   .addEventListener("click", addToCartHandler);
+function renderProductDetails(product) {
+  const container = document.querySelector('.product-detail');
+
+  const discountAmount = product.SuggestedRetailPrice - product.ListPrice;
+  const discountPercent = Math.round((discountAmount / product.SuggestedRetailPrice) * 100);
+
+  const hasDiscount = discountAmount > 0;
+
+  container.innerHTML = `
+    <h2>${product.Name}</h2>
+    <img src="${product.Images.PrimaryLarge}" alt="${product.Name}" />
+    <p class="price">
+      Price: $${product.ListPrice.toFixed(2)}
+      ${hasDiscount ? `<span class="discount">Save ${discountPercent}% ($${discountAmount.toFixed(2)})</span>` : ''}
+    </p>
+    <p>${product.Description}</p>
+  `;
+}
