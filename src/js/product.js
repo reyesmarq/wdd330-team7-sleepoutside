@@ -1,7 +1,7 @@
 import { setLocalStorage, getLocalStorage } from "./utils.mjs";
 import ProductData from "./ProductData.mjs";
 
-const dataSource = new ProductData("tents");
+const dataSource = new ProductData
 
 function addProductToCart(product) {
   const cart = getLocalStorage("so-cart") ?? [];
@@ -35,4 +35,29 @@ function renderProductDetails(product) {
     </p>
     <p>${product.Description}</p>
   `;
+}
+// Load product from URL and render details
+async function init() {
+  const productId = new URLSearchParams(window.location.search).get("product");
+  const product = await dataSource.findProductById(productId);
+  renderProductDetails(product);
+}
+
+init();
+function addProductToCart(product) {
+  const cart = getLocalStorage("so-cart") ?? [];
+
+  // Check if item already exists in cart
+  const existingItem = cart.find(item => item.Id === product.Id);
+
+  if (existingItem) {
+    // Increment quantity
+    existingItem.quantity = (existingItem.quantity ?? 1) + 1;
+  } else {
+    // Add new item with quantity 1
+    product.quantity = 1;
+    cart.push(product);
+  }
+
+  setLocalStorage("so-cart", cart);
 }
