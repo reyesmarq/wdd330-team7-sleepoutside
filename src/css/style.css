@@ -379,6 +379,30 @@ button {
   margin-top: 0.25rem;
 }
 
+/* Alert message styles */
+.alert {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem;
+  background-color: #f8d7da;
+  color: #842029;
+  border: 1px solid #f5c2c7;
+  border-radius: 4px;
+}
+
+.alert p {
+  margin: 0;
+  padding: 0;
+}
+
+.alert-close {
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
 @media screen and (min-width: 500px) {
   body {
     max-width: 1080px;

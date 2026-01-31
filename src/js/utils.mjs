@@ -53,6 +53,23 @@ export async function loadTemplate(path) {
   return html;
 }
 
+// display an alert message as a popup at the top of the page
+export function alertMessage(message, scroll = true) {
+  const alert = document.createElement("div");
+  alert.classList.add("alert");
+  alert.innerHTML = `<p>${message}</p><span class="alert-close">X</span>`;
+  alert.addEventListener("click", function (e) {
+    if (e.target.classList.contains("alert-close")) {
+      alert.remove();
+    }
+  });
+  const main = document.querySelector("main");
+  main.prepend(alert);
+  if (scroll) {
+    window.scrollTo(0, 0);
+  }
+}
+
 // load and render header and footer
 export async function loadHeaderFooter() {
   const headerTemplate = await loadTemplate("/partials/header.html");
