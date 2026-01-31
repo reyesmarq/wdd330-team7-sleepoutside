@@ -3,19 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sleep Outside | Cart</title>
+    <title>Sleep Outside | Order Confirmed</title>
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="../js/cart.js" type="module"></script>
+    <script type="module">
+      import { loadHeaderFooter } from "/js/utils.mjs";
+      loadHeaderFooter();
+    </script>
   </head>
 
   <body>
     <header class="divider" id="main-header"></header>
 
     <main class="divider">
-      <section class="products">
-        <h2>My Cart</h2>
-        <ul class="product-list"></ul>
-        <a id="checkout-btn" href="/checkout/" class="checkout-btn" style="display:none;">Checkout</a>
+      <section class="checkout">
+        <h2>Order Confirmed!</h2>
+        <p>Thank you for your order. Your items will be shipped soon.</p>
+        <a href="/" class="checkout-btn">Continue Shopping</a>
       </section>
     </main>
 

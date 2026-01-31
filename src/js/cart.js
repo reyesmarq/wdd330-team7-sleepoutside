@@ -10,6 +10,7 @@ function renderCartContents() {
   }
   const htmlItems = cartItems.map((item) => cartItemTemplate(item));
   document.querySelector(".product-list").innerHTML = htmlItems.join("");
+  document.querySelector("#checkout-btn").style.display = "block";
 }
 
 function cartItemTemplate(item) {
